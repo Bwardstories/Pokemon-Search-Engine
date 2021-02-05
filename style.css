@@ -1,1 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
 
+.card {
+  position: relative;
+  height: 30rem;
+  width: 25rem;
+  top: 5em;
+  left: 20em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/blankCard.png");
+}
+
+#inputLabel {
+  position: absolute;
+  left: 28rem;
+  top: 1rem;
+}
+
+#pokemonName {
+  position: absolute;
+  left: 26rem;
+  top: 2.3rem;
+}
+
+#submitButton {
+  position: absolute;
+  top: 2.3rem;
+  left: 36.55rem;
+}
+
+.image {
+  position: absolute;
+  top: 4.7rem;
+  left: 6.8rem;
+  height: 11.23rem;
+  width: 15.8rem;
+  background-size: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  position: absolute;
+  width: 8.8rem;
+  height: 1rem;
+  top: 3.3rem;
+  left: 7.2rem;
+}
+
+.hp {
+  position: absolute;
+  width: 4rem;
+  height: 1rem;
+  top: 3.1rem;
+  left: 15.2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ability1 {
+  position: absolute;
+  width: 18.5rem;
+  height: 3.5rem;
+  top: 17.4rem;
+  left: 3.3rem;
+}
+
+.ability2 {
+  position: absolute;
+  width: 18.5rem;
+  height: 3.5rem;
+  top: 20.9rem;
+  left: 3.3rem;
+}
+
+.ability1 h3,
+.ability2 h3 {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.ability1 p,
+.ability2 p {
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+}
