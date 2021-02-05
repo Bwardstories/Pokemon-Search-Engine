@@ -1,20 +1,11 @@
-
-
-
 let picture = ""
-
-
 let submitButton = document.getElementById("submitButton")
-
-let card =  document.querySelector(".image")
+let image =  document.querySelector(".image")
 let name1 = document.querySelector(".name")
 let hp = document.querySelector(".hp")
 let ability1 = document.querySelector(".ability1")
 let ability2 = document.querySelector(".ability2")
-
-let ability1Text
-
-
+let card = document.querySelector(".card")
 
 
 submitButton.addEventListener("click", function () {
@@ -23,6 +14,9 @@ submitButton.addEventListener("click", function () {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then((res) => res.json())
     .then((formattedData) => {
+
+        card.style.backgroundImage = "url('./images/blankCard.png')"
+
         fetch(formattedData.abilities[0].ability.url)
             .then((ability1Res) => ability1Res.json())
             .then((ability1Format) => {
@@ -37,7 +31,7 @@ submitButton.addEventListener("click", function () {
         hp.innerHTML= "hp" + " " + formattedData.stats[0].base_stat;
         document.querySelector(".ability1Name").innerHTML = formattedData.abilities[0].ability.name.toUpperCase()
         document.querySelector(".ability2Name").innerHTML = formattedData.abilities[1].ability.name.toUpperCase()
-        card.style.backgroundImage= "url("+`${formattedData.sprites.front_default}`+ ")"})
+        image.style.backgroundImage= "url("+`${formattedData.sprites.front_default}`+ ")"})
     .catch((e) => {
         alert("That pokemon was not in our database, try again!")
     })    

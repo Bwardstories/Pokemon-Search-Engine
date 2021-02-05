@@ -13,7 +13,7 @@
   left: 20em;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./images/blankCard.png");
+  /* background-image: url("./images/blankCard.png"); */
 }
 
 #inputLabel {
